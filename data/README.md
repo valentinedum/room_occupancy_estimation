@@ -1,7 +1,17 @@
-**Data set for estimating the precise number of occupants in a room using multiple non-intrusive environmental sensors like temperature, light, sound, CO2 and PIR.**
+# Data set for estimating the precise number of occupants in a room using multiple non-intrusive environmental sensors like temperature, light, sound, CO2 and PIR.
 
-- The experimental testbed for occupancy estimation was deployed in a 6m x 4.6m room. The setup consisted of 7 sensor nodes and one edge node in a star configuration with the sensor nodes transmitting data to the edge every 30s using wireless transceivers. No HVAC systems were in use while the dataset was being collected.
-- Five different types of non-intrusive sensors were used in this experiment: temperature, light, sound, CO2 and digital passive infrared (PIR). The CO2, sound and PIR sensors needed manual calibration. For the CO2 sensor, zero-point calibration was manually done before its first use by keeping it in a clean environment for over 20 minutes and then pulling the calibration pin (HD pin) low for over 7s. The sound sensor is essentially a microphone with a variable-gain analog amplifier attached to it. Therefore, the output of this sensor is analog which is read by the microcontrollerâ€™s ADC in volts. The potentiometer tied to the gain of the amplifier was adjusted to ensure the highest sensitivity. The PIR sensor has two trimpots: one to tweak the sensitivity and the other to tweak the time for which the output stays high after detecting motion. Both of these were adjusted to the highest values. Sensor nodes S1-S4 consisted of temperature, light and sound sensors, S5 had a CO2 sensor and S6 and S7 had one PIR sensor each that were deployed on the ceiling ledges at an angle that maximized the sensorâ€™s field of view for motion detection.
-- The data was collected for a period of 4 days in a controlled manner with the occupancy in the room varying between 0 and 3 people. The ground truth of the occupancy count in the room was noted manually.
-- No missing values
-- More information on https://archive.ics.uci.edu/dataset/864/room+occupancy+estimation
+This dataset associated with an article, attached in the documents, 
+gives information (physical or biological data) collected from sensors every 30 seconds in a room. 
+The aim is to use this data to assess the number of people present in the room, from 0 to 3 : the room occupancy. 
+The target variable of classification problem is therefore the data noted “Room_Occupancy_Count”.
+
+## Read the dataset description carefully:
+https://archive.ics.uci.edu/dataset/864/room+occupancy+estimation .
+
+You can read and be inspired by the associated article in which methods are compared, including a random forest model. 
+You can use the classification method of your choice and test a regression.
+
+P.S.: note that in this dataset, a sample can be identified by the date, time and second of the reading 
+(i.e. the unique pair of “Date” and “Time” variables in the dataset).
+
+
